@@ -18,6 +18,8 @@ or chmod 775.
 ### Extension
 Extensions are added automatically through the script, after the script exits gnome-session you must enter gnome-extensions and enable the installed extensions.
 
+Fildem may require some tinkering to get working
+![Screenshot from 2021-06-17 11-09-00](https://user-images.githubusercontent.com/864630/122452193-da852880-cf5d-11eb-8ca8-27e481ab682c.png)
 
 ### Arch
 By the way, I use Arch.
@@ -31,8 +33,3 @@ The config files located within the Config directory are automatically moved to 
 All emacs configs are done through the doom .el files. Do not touch the Emacs files. 
 
 Most of the customizations to the gnome-shell will be achieved through gnome-extensions. 
-
-
-PLACEHOLDER  PLACEHOLDER  PLACEHOLDER  PLACEHOLDER  PLACEHOLDER  PLACEHOLDER  
-![Screenshot from 2021-06-17 11-09-00](https://user-images.githubusercontent.com/864630/122452193-da852880-cf5d-11eb-8ca8-27e481ab682c.png)
-PLACEHOLDER  PLACEHOLDER  PLACEHOLDER  PLACEHOLDER  PLACEHOLDER  PLACEHOLDER
