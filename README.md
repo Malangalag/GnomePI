@@ -26,7 +26,7 @@ Fildem may require some tinkering to get working
 By the way, I use Arch.
 
 
-## Configuration
+## ConfigurationShare
 The config files located within the Config directory are automatically moved to where they should* be. There may be an issue with Doom/Emacs, as the config file can either be located in ~/.doom.d OR ~/.local/doom. Emacs will only listen to one location. 
 
 
@@ -34,3 +34,9 @@ The config files located within the Config directory are automatically moved to 
 All emacs configs are done through the doom .el files. Do not touch the Emacs files. 
 
 Most of the customizations to the gnome-shell will be achieved through gnome-extensions. 
+
+Glava is configured for a 1080p screen, If your screen resolution is larger, or smaller you will want to edit the config file inside the glava folder before running the script, or follow the install path after the script has ran.
+
+(https://giphy.com/embed/gSo8y5lh0QUBer5rxJ)
+
+(https://giphy.com/gifs/gSo8y5lh0QUBer5rxJ)
