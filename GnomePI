@@ -101,6 +101,12 @@ echo
 sudo mv ~/Documents/Build/GnomePI/Config Files/config.fish /etc/fish/
 
 echo
+echo "Changing Shell to Fish"
+echo
+
+sudo chsh -s /usr/local/bin/fish
+
+echo
 echo "Installing Doom Emacs & Creating Emacs Backup"
 echo
 #  Doom Emacs
@@ -151,6 +157,8 @@ sudo systemctl start ntpd.service
 echo
 echo "Done Installing, Exiting Gnome-Shell."
 echo
+
+
 
 #  Logout to refresh gnome-shell session
 gnome-session-quit --no-prompt  
