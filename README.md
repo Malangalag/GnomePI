@@ -19,6 +19,7 @@ or chmod 775.
 Extensions are added automatically through the script, after the script exits gnome-session you must enter gnome-extensions and enable the installed extensions.
 
 Fildem may require some tinkering to get working
+
 ![Screenshot from 2021-06-17 11-09-00](https://user-images.githubusercontent.com/864630/122452193-da852880-cf5d-11eb-8ca8-27e481ab682c.png)
 
 ### Arch
