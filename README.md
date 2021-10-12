@@ -47,3 +47,10 @@ Most of the customizations to the gnome-shell will be achieved through gnome-ext
 Glava is configured for a 1080p screen, If your screen resolution is larger, or smaller you will want to edit the config file inside the glava folder before running the script, or follow the install path after the script has ran.
 
 ![Peek 2021-10-12 13-18](https://user-images.githubusercontent.com/20939357/137024232-cf9ce954-e3c7-47a3-8ce5-7072e0181f51.gif)
+
+
+## Original Files
+If you would like to visit any of the original creators repos, go to the forked Repo's in my profile and follow them back to the original creator.
+The software & extensions used in this script were not created by me.
+
+https://github.com/Malangalag?tab=repositories
