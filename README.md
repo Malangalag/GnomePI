@@ -28,7 +28,7 @@ Note that the Fildem global Appmenu only functions with applications that actual
 By the way, I use Arch.
 
 
-## ConfigurationShare
+## Configuration
 The config files located within the Config directory are automatically moved to where they should* be. There may be an issue with Doom/Emacs, as the config file can either be located in ~/.doom.d OR ~/.local/doom. Emacs will only listen to one location. 
 
 
