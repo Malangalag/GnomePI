@@ -4,7 +4,7 @@
 The goal of this script is to configure the Gnome desktop enviroment with all the themes and software that I consider core components of my gnome desktop.
 
 ## Requirements
-This script was made with Pseudo-Manjaro, Manjaro or Manjaro based distributions like Garuda will be required for a painless install. Many of the software/extensions installed with the script require dependancies installed by default on Manjaro. 
+This script was made with Pseudo-Manjaro, Manjaro or Manjaro based distributions like Garuda will be required for a painless install. Many of the software/extensions installed with the script require dependancies installed by default on Manjaro, or require a patched package from the Manjaro Repos. 
 
 
 (Garuda Linux is recommended for a Manjaro experience without the Manjaro bloat. STRONGLY RECOMMENDED to remove Chaotic AUR if you go the route of Garuda.)
