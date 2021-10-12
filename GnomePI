@@ -1,0 +1,160 @@
+#!/bin/bash
+
+if [ "$(id -u)" = 0 ]; then
+    echo 
+    echo "This script places files into your Home directory, "
+    echo "as such this script must NOT be ran as root"
+    echo "If this script was ran as root it would place everything into your root directory"
+    echo 
+    exit 1
+fi
+
+error() { \
+    clear; printf "ERROR:\\n%s\\n" "$1" >&2; exit 1;
+}
+
+echo
+echo "Updating"
+echo "This script will ask you for your sudo password, don't walk away"
+#  Update
+sudo pacman --noconfirm --needed -Sy dialog || error "Syncing Repos Failed"
+
+echo
+echo "Installing Dependencies"
+echo
+#  Dependencies
+PKGS=('imagemagick' 'inkscape' 'sassc' 'optipng' 'yay' 'git' 'xorg-xprop'
+'python' 'glibc' 'cmake' 'clang' 'nodejs' 'fish' 'gufw' 'neofetch' 'unrar'
+'htop' 'curl' 'linux-lts' 'dialog' 'wget' 
+)
+
+for PKG in "${PKGS[@]}"; do
+    echo "Installing: ${PKG}"
+    sudo pacman -S "$PKG" --noconfirm --needed
+done
+
+echo
+echo "Installing Software"
+echo
+#  Software
+PKGZ=('lollypop' 'tilix' 'code' 'pantheon-calculator' 'celluloid' 'glava'
+'gnome-boxes'
+)
+
+for PKG in "${PKGZ[@]}"; do
+    echo "Installing: ${PKG}"
+    sudo pacman -S "$PKG" --noconfirm --needed
+done
+
+echo
+echo "Installing AUR Firefox appmenu patch & pop_shell extension"
+echo
+#  AUR Software
+yay -S firefox-appmenu-bin gnome-shell-extension-pop-shell-bin gtk-sourceview3-fish-git mcfly-bin --noconfirm --needed
+#  Mv & Dir
+mkdir ~/Documents/Build/
+cd ~/Documents/Build/
+
+echo
+echo "Cloning Github Repos into ~/Documents/Build/"
+echo 
+#  Git here
+git clone https://github.com/Malangalag/GnomePI.git
+git clone https://github.com/Malangalag/unite-shell.git
+git clone https://github.com/Malangalag/dash-to-dock.git
+git clone https://github.com/Malangalag/transparent-window-moving.git
+git clone https://github.com/Malangalag/gnome-rounded-corners.git
+git clone https://github.com/Malangalag/CoverflowAltTab.git
+git clone --depth 1 https://github.com/Malangalag/doom-emacs ~/.emacs.d
+git clone https://github.com/Malangalag/WhiteSur-gtk-theme.git
+git clone https://github.com/Malangalag/WhiteSur-icon-theme.git
+
+
+echo
+echo "Installing Extensions"
+echo
+#  Dash To Dock
+cd dash-to-dock
+git checkout ewlsh/gnome-40
+make
+make install
+#  Transparent Window Moving
+cd ~/Documents/Build/transparent-window-moving/
+make install
+
+#  Gnome Rounded Corners
+sudo mv ~/Documents/Build/gnome-rounded-corners/Rounded_Corners@lennart-k ~/.local/share/gnome-shell/extensions/
+#  Cover Flow Alt+Tab
+sudo mv ~/Documents/Build/CoverflowAltTab/CoverflowAltTab@dmo60.de ~/.local/share/gnome-shell/extensions/
+#  Unite Shell
+sudo mv ~/Documents/Build/unite-shell/unite@hardpixel.eu ~/.local/share/gnome-shell/extensions/
+#  Fildem Global Appmenu Configs
+mv ~/Documents/Build/GnomePI/Config Files/fildem/.gtkrc-2.0 ~/
+mv ~/Documents/Build/GnomePI/Config Files/fildem/settings.ini ~/.config/gtk-3.0/
+#  glava Visualizer Config
+mv ~/Documents/Build/GnomePI/Config Files/Glava/rc.glsl ~/.config/glava
+
+echo
+echo "Moving config.fish -> /etc/fish/"
+echo
+
+sudo mv ~/Documents/Build/GnomePI/Config Files/config.fish /etc/fish/
+
+echo
+echo "Installing Doom Emacs & Creating Emacs Backup"
+echo
+#  Doom Emacs
+[ -d ~/.emacs.d ] && mv ~/.emacs.d ~/.emacs.d.bak.$(date +"%Y%m%d_%H%M%S")
+[ -f ~/.emacs ] && mv ~/.emacs ~/.emacs.bak.$(date +"%Y%m%d_%H%M%S")
+~/.emacs.d/bin/doom install
+
+echo
+echo "Syncing Emacs with Doom config"
+echo
+
+~/.emacs.d/bin/doom sync 
+
+echo
+echo "Installing Whitesur Theme"
+echo
+#  Whitesur Theme
+cd ~/Documents/Build/WhiteSur-gtk-theme
+./install.sh -i gnome  # install Whitesur theme with Gnome icon
+./tweaks.sh -f monterey  # install Monterey Firefox theme
+#  Whitesur Icons
+cd ~/Documents/Build/WhiteSur-icon-theme
+./install.sh
+
+
+echo
+echo "Setting laptop lid close to suspend"
+echo
+
+sudo sed -i -e 's|[# ]*HandleLidSwitch[ ]*=[ ]*.*|HandleLidSwitch=suspend|g' /etc/systemd/logind.conf
+
+echo
+echo "Enabling bluetooth daemon and setting it to auto-start"
+echo
+
+sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+
+echo
+echo "Enabling Network Time Protocol so clock will be set via the network"
+echo
+
+sudo ntpd -qg
+sudo systemctl enable ntpd.service
+sudo systemctl start ntpd.service
+
+echo
+echo "Done Installing, Exiting Gnome-Shell."
+echo
+
+#  Logout to refresh gnome-shell session
+gnome-session-quit --no-prompt  
+
+
+
+#TODO Test script in a virtual enviroment
