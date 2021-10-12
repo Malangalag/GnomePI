@@ -91,9 +91,9 @@ sudo mv ~/Documents/Build/unite-shell/unite@hardpixel.eu ~/.local/share/gnome-sh
 #  Fildem Global Appmenu Configs
 mv ~/Documents/Build/GnomePI/Config Files/fildem/.gtkrc-2.0 ~/
 mv ~/Documents/Build/GnomePI/Config Files/fildem/settings.ini ~/.config/gtk-3.0/
-#  glava Visualizer Config
+#  glava Visualizer Config & autostart
 mv ~/Documents/Build/GnomePI/Config Files/Glava/rc.glsl ~/.config/glava
-
+mv ~/Documents/Build/GnomePI/Config Files/Glava/glava.desktop ~/.config/autostart/
 echo
 echo "Moving config.fish -> /etc/fish/"
 echo
