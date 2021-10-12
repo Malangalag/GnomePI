@@ -17,7 +17,7 @@ echo
 echo "Updating"
 echo "This script will ask you for your sudo password, don't walk away"
 #  Update
-sudo pacman --noconfirm --needed -Sy dialog || error "Syncing Repos Failed"
+sudo pacman --noconfirm --needed -Syu dialog || error "Syncing Repos Failed"
 
 echo
 echo "Installing Dependencies"
