@@ -35,7 +35,14 @@ The config files located within the Config directory are automatically moved to 
 ## Customization
 All emacs configs are done through the doom .el files. Do not touch the Emacs files. 
 
+![doom](https://user-images.githubusercontent.com/20939357/137025685-2cebd9fe-7535-4356-bb93-e06421150701.jpg)
+
+
+
 Most of the customizations to the gnome-shell will be achieved through gnome-extensions. 
+
+
+
 
 Glava is configured for a 1080p screen, If your screen resolution is larger, or smaller you will want to edit the config file inside the glava folder before running the script, or follow the install path after the script has ran.
 
