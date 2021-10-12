@@ -20,7 +20,9 @@ Extensions are added automatically through the script, after the script exits gn
 
 Fildem may require some tinkering to get working
 
-![Screenshot from 2021-06-17 11-09-00](https://user-images.githubusercontent.com/864630/122452193-da852880-cf5d-11eb-8ca8-27e481ab682c.png)
+![appmenu](https://user-images.githubusercontent.com/20939357/137024804-3e7fc617-4858-4b1b-a18e-5ee78731abaa.jpg)
+
+Note that the Fildem global Appmenu only functions with applications that actually give it the necessary data. As such GTK4 apps will not display an appmenu.
 
 ### Arch
 By the way, I use Arch.
