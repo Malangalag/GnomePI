@@ -25,7 +25,7 @@ echo
 #  Dependencies
 PKGS=('imagemagick' 'inkscape' 'sassc' 'optipng' 'yay' 'git' 'xorg-xprop'
 'python' 'glibc' 'cmake' 'clang' 'nodejs' 'fish' 'gufw' 'neofetch' 'unrar'
-'htop' 'curl' 'linux-lts' 'dialog' 'wget' 'emacs'
+'htop' 'curl' 'linux-lts' 'dialog' 'wget' 'emacs' 'make'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -106,7 +106,7 @@ echo
 echo "Changing Shell to Fish"
 echo
 
-sudo chsh -s /usr/local/bin/fish
+chsh -s /usr/local/bin/fish
 
 echo
 echo "Installing Doom Emacs & Creating Emacs Backup"
@@ -115,6 +115,12 @@ echo
 [ -d ~/.emacs.d ] && mv ~/.emacs.d ~/.emacs.d.bak.$(date +"%Y%m%d_%H%M%S")
 [ -f ~/.emacs ] && mv ~/.emacs ~/.emacs.bak.$(date +"%Y%m%d_%H%M%S")
 ~/.emacs.d/bin/doom install
+
+mv ~/Documents/Build/GnomePI/Config/Doom/init.el ~/.doom.d/
+mv ~/Documents/Build/GnomePI/Config/Doom/config.el ~/.doom.d/
+mv ~/Documents/Build/GnomePI/Config/Doom/custom.el ~/.doom.d/
+mv ~/Documents/Build/GnomePI/Config/Doom/packages.el ~/.doom.d/
+
 
 echo
 echo "Syncing Emacs with Doom config"
