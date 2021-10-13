@@ -3,13 +3,26 @@
 ## Post Installation script for Arch based Gnome desktop enviroments
 The goal of this script is to configure the Gnome desktop enviroment with all the themes and software that I consider core components of my gnome desktop.
 
+## Initial Setup
+You will need to run these commands in a terminal before running the script.
+
+
+![pacman](https://user-images.githubusercontent.com/20939357/137063740-9ee60590-4714-499f-9efc-641bd7e71266.jpg)
+
+
+```
+sudo pacman -Sy yay fish
+
+```
+![yay](https://user-images.githubusercontent.com/20939357/137063617-ed2974d1-242a-41dc-896a-5cac6e4d8c09.jpg)
+
+```
+yay -S firefox-appmenu-bin gnome-shell-extension-pop-shell-bin gtksourceview3-fish-git mcfly-bin --noconfirm --needed
+```
+
+
 ## Requirements
-This script was made with Pseudo-Manjaro, Manjaro or Manjaro based distributions like Garuda will be required for a painless install. Many of the software/extensions installed with the script require dependencies installed by default on Manjaro, or require a patched package from the Manjaro Repos. 
-
-
-(Garuda Linux is recommended for a Manjaro experience without the Manjaro bloat. STRONGLY RECOMMENDED to remove Chaotic AUR if you go the route of Garuda.)
-
-Arch users this is a post install script, as such it does not include installing any of the core components of your system such as network management, window management, etc. 
+This script was made for Manjaro. It will work on garuda linux as well.
 
 ## Installation
 Make the script executable (Right click the .sh file within nautilus -> click on properties -> click on Permissions -> toggle 'Allow executing file as program') and run it in a terminal like any other shell script.
