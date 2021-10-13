@@ -65,7 +65,7 @@ git clone https://github.com/Malangalag/dash-to-dock.git
 git clone https://github.com/Malangalag/transparent-window-moving.git
 git clone https://github.com/Malangalag/gnome-rounded-corners.git
 git clone https://github.com/Malangalag/CoverflowAltTab.git
-git clone --depth 1 https://github.com/Malangalag/doom-emacs ~/.emacs.d
+
 git clone https://github.com/Malangalag/WhiteSur-gtk-theme.git
 git clone https://github.com/Malangalag/WhiteSur-icon-theme.git
 
@@ -111,6 +111,7 @@ chsh -s /usr/local/bin/fish
 echo
 echo "Installing Doom Emacs & Creating Emacs Backup"
 echo
+sudo git clone --depth 1 https://github.com/Malangalag/doom-emacs ~/.emacs.d
 #  Doom Emacs
 [ -d ~/.emacs.d ] && mv ~/.emacs.d ~/.emacs.d.bak.$(date +"%Y%m%d_%H%M%S")
 [ -f ~/.emacs ] && mv ~/.emacs ~/.emacs.bak.$(date +"%Y%m%d_%H%M%S")
