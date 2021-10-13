@@ -25,7 +25,7 @@ echo
 #  Dependencies
 PKGS=('imagemagick' 'inkscape' 'sassc' 'optipng' 'yay' 'git' 'xorg-xprop'
 'python' 'glibc' 'cmake' 'clang' 'nodejs' 'fish' 'gufw' 'neofetch' 'unrar'
-'htop' 'curl' 'linux-lts' 'dialog' 'wget' 'emacs' 'make'
+'htop' 'curl' 'linux-lts' 'dialog' 'wget' 'emacs' 'make' 'exa'
 )
 
 for PKG in "${PKGS[@]}"; do
