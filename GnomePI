@@ -92,7 +92,7 @@ sudo mv ~/Documents/Build/unite-shell/unite@hardpixel.eu ~/.local/share/gnome-sh
 mv ~/Documents/Build/GnomePI/Config/fildem/.gtkrc-2.0 ~/
 mv ~/Documents/Build/GnomePI/Config/fildem/settings.ini ~/.config/gtk-3.0/
 #  glava Visualizer Config & autostart
-mkdir ~/.config/glava
+mkdir ~/.config/glava/
 mkdir ~/.config/autostart/
 mv ~/Documents/Build/GnomePI/Config/Glava/rc.glsl ~/.config/glava
 mv ~/Documents/Build/GnomePI/Config/Glava/glava.desktop ~/.config/autostart/
@@ -111,8 +111,9 @@ chsh -s /usr/local/bin/fish
 echo
 echo "Installing Doom Emacs & Creating Emacs Backup"
 echo
-cd ~/.emacs.d
-git clone https://github.com/Malangalag/doom-emacs.git
+mkdir ~/.emacs.d/
+mkdir ~/.emacs.d/bin/
+git clone --depth 1  https://github.com/Malangalag/doom-emacs.git ~/.emacs.d/
 
 #  Doom Emacs
 [ -d ~/.emacs.d ] && mv ~/.emacs.d ~/.emacs.d.bak.$(date +"%Y%m%d_%H%M%S")
