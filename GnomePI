@@ -106,7 +106,7 @@ echo
 echo "Changing Shell to Fish"
 echo
 
-chsh -s /usr/local/bin/fish
+chsh -s /bin/fish
 
 echo
 echo "Installing Doom Emacs & Creating Emacs Backup"
