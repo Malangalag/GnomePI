@@ -112,7 +112,8 @@ echo
 echo "Installing Doom Emacs & Creating Emacs Backup"
 echo
 mkdir ~/.emacs.d/
-mkdir ~/.emacs.d/bin/
+cd ~/.emacs.d/
+mkdir /bin/
 git clone --depth 1  https://github.com/Malangalag/doom-emacs.git ~/.emacs.d/
 
 #  Doom Emacs
