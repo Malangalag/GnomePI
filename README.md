@@ -6,8 +6,7 @@ The goal of this script is to configure the Gnome desktop enviroment with all th
 ## Initial Setup
 You will need to run these commands in a terminal before running the script.
 
-
-![pacman](https://user-images.githubusercontent.com/20939357/137063740-9ee60590-4714-499f-9efc-641bd7e71266.jpg)
+![pacman](https://user-images.githubusercontent.com/20939357/137064208-1b1c06f6-c0b7-4b38-a7e8-4c167683013f.jpg)
 
 
 ```
