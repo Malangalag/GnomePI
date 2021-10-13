@@ -111,7 +111,8 @@ chsh -s /usr/local/bin/fish
 echo
 echo "Installing Doom Emacs & Creating Emacs Backup"
 echo
-sudo git clone --depth 1 https://github.com/Malangalag/doom-emacs ~/.emacs.d
+cd ~/.emacs.d
+sudo git clone --depth 1 https://github.com/Malangalag/doom-emacs 
 #  Doom Emacs
 [ -d ~/.emacs.d ] && mv ~/.emacs.d ~/.emacs.d.bak.$(date +"%Y%m%d_%H%M%S")
 [ -f ~/.emacs ] && mv ~/.emacs ~/.emacs.bak.$(date +"%Y%m%d_%H%M%S")
