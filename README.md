@@ -11,7 +11,7 @@ You will need to run these commands in a terminal before running the script.
 
 
 ```
-sudo pacman -Sy yay fish
+sudo pacman -Sy yay fish emacs
 
 ```
 ![yay](https://user-images.githubusercontent.com/20939357/137063617-ed2974d1-242a-41dc-896a-5cac6e4d8c09.jpg)
@@ -56,8 +56,8 @@ Most of the customizations to the gnome-shell will be achieved through gnome-ext
 
 
 
-
-Glava is configured for a 1080p screen, If your screen resolution is larger, or smaller you will want to edit the config file inside the glava folder before running the script, or follow the install path after the script has ran.
+Glava is a nice addition to Gnome if you have the spare resources, i've opted to leave it out of this script for various reasons.
+I will the glava config files incase you want to install it later. https://github.com/jarcode-foss/glava
 
 ![Peek 2021-10-12 13-18](https://user-images.githubusercontent.com/20939357/137024232-cf9ce954-e3c7-47a3-8ce5-7072e0181f51.gif)
 
