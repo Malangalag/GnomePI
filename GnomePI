@@ -89,8 +89,8 @@ sudo mv ~/Documents/Build/CoverflowAltTab/CoverflowAltTab@dmo60.de ~/.local/shar
 #  Unite Shell
 sudo mv ~/Documents/Build/unite-shell/unite@hardpixel.eu ~/.local/share/gnome-shell/extensions/
 #  Fildem Global Appmenu Configs
-mv ~/Documents/Build/GnomePI/Config Files/fildem/.gtkrc-2.0 ~/
-mv ~/Documents/Build/GnomePI/Config Files/fildem/settings.ini ~/.config/gtk-3.0/
+mv ~/Documents/Build/GnomePI/Config/fildem/.gtkrc-2.0 ~/
+mv ~/Documents/Build/GnomePI/Config/fildem/settings.ini ~/.config/gtk-3.0/
 #  glava Visualizer Config & autostart
 mkdir ~/.config/glava
 mkdir ~/.config/autostart/
