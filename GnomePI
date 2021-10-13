@@ -92,13 +92,15 @@ sudo mv ~/Documents/Build/unite-shell/unite@hardpixel.eu ~/.local/share/gnome-sh
 mv ~/Documents/Build/GnomePI/Config Files/fildem/.gtkrc-2.0 ~/
 mv ~/Documents/Build/GnomePI/Config Files/fildem/settings.ini ~/.config/gtk-3.0/
 #  glava Visualizer Config & autostart
-mv ~/Documents/Build/GnomePI/Config Files/Glava/rc.glsl ~/.config/glava
-mv ~/Documents/Build/GnomePI/Config Files/Glava/glava.desktop ~/.config/autostart/
+mkdir ~/.config/glava
+mkdir ~/.config/autostart/
+mv ~/Documents/Build/GnomePI/Config/Glava/rc.glsl ~/.config/glava
+mv ~/Documents/Build/GnomePI/Config/Glava/glava.desktop ~/.config/autostart/
 echo
 echo "Moving config.fish -> /etc/fish/"
 echo
 
-sudo mv ~/Documents/Build/GnomePI/Config Files/config.fish /etc/fish/
+sudo mv ~/Documents/Build/GnomePI/Config/config.fish /etc/fish/
 
 echo
 echo "Changing Shell to Fish"
@@ -161,8 +163,7 @@ echo
 
 
 #  Logout to refresh gnome-shell session
-gnome-session-quit --no-prompt  
+#  gnome-session-quit --no-prompt  
 
 
 
-#TODO Test script in a virtual enviroment
