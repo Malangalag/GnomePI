@@ -112,7 +112,8 @@ echo
 echo "Installing Doom Emacs & Creating Emacs Backup"
 echo
 cd ~/.emacs.d
-sudo git clone --depth 1 https://github.com/Malangalag/doom-emacs 
+git clone https://github.com/Malangalag/doom-emacs.git
+
 #  Doom Emacs
 [ -d ~/.emacs.d ] && mv ~/.emacs.d ~/.emacs.d.bak.$(date +"%Y%m%d_%H%M%S")
 [ -f ~/.emacs ] && mv ~/.emacs ~/.emacs.bak.$(date +"%Y%m%d_%H%M%S")
