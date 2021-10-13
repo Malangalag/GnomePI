@@ -1,4 +1,4 @@
-# GnomePI
+# GnomePI (testing)
 
 ## Post Installation script for Arch based Gnome desktop enviroments
 The goal of this script is to configure the Gnome desktop enviroment with all the themes and software that I consider core components of my gnome desktop.
